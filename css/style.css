@@ -1,7 +1,11 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 header{
+    z-index: 3;
+    top: -4rem;
+    position: sticky;
     background: linear-gradient(90deg, #f01543 -1.58%, #fe724c 100%);   
 }
 /* header */
@@ -64,10 +68,11 @@ details,summary{
 .navbar{
     display: flex;  
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     background-color: #000929 !important;
 }
 .navbar__menu__main{
+    gap:4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -104,6 +109,7 @@ nav li ul li{
     padding: 0 0 0.625rem 0;
 }
 nav li a{
+    font-weight: 500;
     display: block;
     width: 100%;
     position: relative;
@@ -137,7 +143,6 @@ nav >ul >li:hover ul{
     position: relative;
     width: 13.5rem;
 }
-
 .navbar__menu__mbt__search input{
     width: 13.5rem;
     border-radius: 0.8rem;
@@ -212,7 +217,6 @@ nav >ul >li:hover ul{
     background:red;
     transition: all .3s;
 }
-
 .navbar__menu__mbt__icon svg{
     color: #e9ecef;
     stroke: currentColor;
@@ -222,21 +226,331 @@ nav >ul >li:hover ul{
     justify-content: center;
     align-items: center;
 }
+/*  */
 .btn{
+    position: relative;
     margin-left: 1rem;
     display: block;
-
     padding: 0.9rem  2.2rem ;
     border-radius: 1rem;
-    
 }
-
+/*  */
 .btn-w{
-    background: #e9ecef;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    background-color: #fff;
     border: #f01543 1px solid;
 }
+.btn-w::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+
+    z-index: -1;
+    background-color: #ffffff;
+}
+.btn-w:hover{
+    color: #f01543;
+}
+.btn-w:hover:after{
+        transition:0.4s ;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    border-radius: 1rem; 
+}
+.btn-w::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    transition:0.5s ;
+    left: 0;
+    z-index: -1;
+    background-color: #f01543;
+}
+.btn-w:hover:before{
+    transition:0.1s  ;
+    transition-delay:0.3s ;
+    height: 0%;
+}
+/*  */
 .btn-r{
-    background:transparent ;
+    z-index: 1;
+    overflow: hidden;
+    background:transparent;
     color: #fff;
     border:  #e9ecef 1px solid;
+}
+.btn-r::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+
+    z-index: -1;
+    background-color: #f01543 ;
+}
+.btn-r:hover{
+    transition: 0.5s;
+    border: #f01543;
+}
+.btn-r:hover:after{
+        transition:0.4s ;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    border-radius: 1rem; 
+}
+.btn-r::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 120%;
+    transition:0.5s ;
+    left: 0;
+    z-index: -1;
+    background-color: #f01543;
+}
+.btn-r:hover:before{
+    height: 100%;
+    transition-delay:0.3s ;
+    height: 120%;
+    bottom: 0;    
+
+}
+/* seciton-1 */
+.section-1{
+    padding:6.25rem 0 15.85rem;
+    background-size: cover;  
+    background-image: url(https://reservq.vercel.app/assets/banner-bg-two-751df5dc.png);
+}
+.section-1__main h1{
+    font-size: 68px;
+    color: #ffffff;
+}
+.section-1__main h1 span{
+    background-image: linear-gradient(90deg, #f01543 -1.58%, #fe724c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent; 
+}
+.section-1__main p{
+    padding:2rem  0 0 0  ;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 145%;
+}
+.section-1__main__btn{
+    font-weight: 600;
+    height:92px;
+    margin-top:4.5rem ;
+    padding: 0.75rem;
+    width: 612px;
+    justify-content: space-between;
+    display: flex; 
+    background-color: #fff; 
+    border-radius: 0.625rem;
+}
+.section-1__main__btn .btn{
+    padding: 1rem;
+    display: inline-block;
+    width: 11.75rem;
+    margin: 0;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    line-height: 68px;
+    text-align: center;
+}
+.section-1__main__btn .btn-r:hover{
+    color: #fff;
+}
+.section-1__main__btn .btn-r{
+    color: red; 
+    border:1px solid     #f01543 !important;
+}
+.section-1__main__btn svg{
+    vertical-align:   middle;
+    stroke: currentColor;
+}
+/* section-2 */
+.section-2{
+    padding: 5rem 0;
+    background-image: url(https://reservq.vercel.app/assets/categories-bg-2c92439a.png);
+}
+.section-2__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-2__top h2{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+.section-2__top .btn-r{
+    height: 55px;
+    padding:0.8rem 2rem  ;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f01543  ;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0b0a0f;
+    border: #6c727f solid 1px;
+}
+.section-2__top .btn-r:hover{
+    color: #fff;
+}
+.section-2__cards{
+    height: 142px;
+    margin-top: 2.6rem ;
+    margin-left: -12px;
+    display: flex;  
+}
+.section-2__cards__card {
+    margin-bottom:1.25rem ;
+    padding: 0 0.75rem 0 0.75rem;
+}
+.section-2__cards__card__item{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 0.75rem;
+    background-color: #f4f4f6;;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    border-radius: 1rem;
+}
+.section-2__cards__card__item_icon{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-2__cards__card__item_icon svg{
+    vertical-align: middle;
+    fill: currentColor;
+    color: #000929;
+}
+.section-2__cards__card__item__text{
+    padding-top: 0.75rem;
+}
+.section-2__cards__card__item__text h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+.section-2__cards__card__item__text h4{
+    position: relative;
+    padding: 0.25rem 0 0 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 145%;
+}
+.section-2__cards__card__item__text h4::before{
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50% );
+    background-color: #fe724c;
+
+}
+.section-2__cards__card__item::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    transition: ease-in-out 0.5s;
+    background-color:#f01543;
+
+}
+.section-2__cards__card__item:hover:after{
+    left: 0;
+    width: 100%;
+}
+.section-2__cards__card__item:hover{
+    transition: 0.2s;
+    color: #e9ecef;
+}
+.section-2__cards__card__item:hover .section-2__cards__card__item_icon{
+    background-color: #0009291a;
+}
+.section-2__cards__card__item:hover .section-2__cards__card__item_icon svg{
+    fill:#e9ecef;
+    transition: 0.2s ease-in;
+}
+/* promasya */
+.promasya .col-5,.col-7{
+    height: 360px;
+    padding: 0  0.75rem;
+}
+.promasya  img{
+    width: 100%;
+    height: 100%;
+}
+.promasya .pro_card{
+    overflow: hidden;
+    position: relative;
+}
+.promasya .pro_card::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    left: -80%;
+    top: 0;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    transform: skew(-25deg);
+    display: block;
+}   
+.promasya .pro_card:hover:after{
+    transition: 1s;
+    left: 180%;
+}
+/* section-3 */
+.section-3{
+    padding: 5rem 0;
+}
+.section-3__header h2 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 140%;
+}
+.section-3__header{
+    margin: auto ;
+}
+.section-3__nav {
+
+}
+.section-3__nav ul{
+    display: flex;
+    gap: 20px;
+}
+.section-3__nav ul li{
+    
 }
