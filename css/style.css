@@ -3,7 +3,7 @@ body {
 }
 
 header{
-    z-index: 3;
+    z-index: 19;
     top: -4rem;
     position: sticky;
     background: linear-gradient(90deg, #f01543 -1.58%, #fe724c 100%);   
@@ -21,13 +21,14 @@ header{
     color: #000929;
 }
 .tophead svg {
-    vertical-align:   middle;
-    stroke: currentColor;
+        vertical-align:   middle;
+        stroke: currentColor;
 }
 details,summary{
     display: block;
 }
 .header__detalis{
+    position: relative;
     display: flex;
     align-items: center;
     color:#ffffff;
@@ -37,6 +38,7 @@ details,summary{
     width: 12rem;
     background-color: #ffffff;
     padding: 0.8rem 0;
+    border-radius: 0.8rem;
 }
 .header__detalis ul li{
     padding: 0.3rem; 
@@ -48,6 +50,10 @@ details,summary{
 .header__detalis ul li:hover{
     color: #1e2125;
     background-color: #e9ecef;
+}
+.header__detalis[open] ul{
+    position: absolute;
+    right: 0;
 }
 .tophead__contact{
     font-size: 14px;
@@ -304,7 +310,7 @@ nav >ul >li:hover ul{
     border: #f01543;
 }
 .btn-r:hover:after{
-        transition:0.4s ;
+    transition:0.4s ;
     width: 100%;
     left: 0;
     height: 100%;
@@ -314,7 +320,7 @@ nav >ul >li:hover ul{
     content: "";
     position: absolute;
     width: 100%;
-    height: 20%;
+    height: 0%;
     bottom: 120%;
     transition:0.5s ;
     left: 0;
@@ -324,7 +330,7 @@ nav >ul >li:hover ul{
 .btn-r:hover:before{
     height: 100%;
     transition-delay:0.3s ;
-    height: 120%;
+
     bottom: 0;    
 
 }
@@ -504,19 +510,17 @@ nav >ul >li:hover ul{
     transition: 0.2s ease-in;
 }
 /* promasya */
-.promasya .col-5,.col-7{
-    height: 360px;
-    padding: 0  0.75rem;
+.promasya{
+    display: flex;
+    flex-direction: row !important;
+    gap: 1.5rem;
 }
-.promasya  img{
-    width: 100%;
-    height: 100%;
-}
-.promasya .pro_card{
+.pro_card{
     overflow: hidden;
     position: relative;
+    border-radius: 1rem;
 }
-.promasya .pro_card::after{
+.pro_card::after{
     content: "";
     position: absolute;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
@@ -528,13 +532,14 @@ nav >ul >li:hover ul{
     transform: skew(-25deg);
     display: block;
 }   
-.promasya .pro_card:hover:after{
+.pro_card:hover:after{
     transition: 1s;
     left: 180%;
 }
 /* section-3 */
 .section-3{
     padding: 5rem 0;
+    background-image: url(https://reservq.vercel.app/assets/traditional-bg-9423c4a0.png);
 }
 .section-3__header h2 {
     font-size: 3rem;
@@ -544,13 +549,673 @@ nav >ul >li:hover ul{
 .section-3__header{
     margin: auto ;
 }
-.section-3__nav {
-
-}
 .section-3__nav ul{
     display: flex;
-    gap: 20px;
+    gap: 0.8rem;
+    padding: 0.4rem;
+    border: 1px solid #f01543;
+    margin:3rem auto;
+    border-radius: 0.5rem;
 }
 .section-3__nav ul li{
-    
+    display: block;
+    padding: 0.5rem 0.625rem;
+    border-radius:0.5rem ;
+    font-weight: 500;
+    line-height: 160%;
+}
+.active{
+    background-color:#f01543;
+    color: #fff;
+}
+.section-3__cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-3__cards__card{
+    background: #fff;
+    padding: 0 0.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 1rem;
+}
+.section-3__cards__card__item{
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.section-3__cards_card__head{
+    margin-bottom: 1rem;
+    position: relative;
+}
+.section-3__cards_card__head img{
+    height: 110%;
+    transition: 0.5s;
+}
+.section-3__cards__card .pro_card{
+    max-height: 240px;
+}
+.section-3__cards__card:hover .pro_card img{
+    transform: scale(1.1);
+
+}
+.section-3__cards_card__head .icon span{
+    height: 1.5rem;
+}
+.section-3__cards_card__head .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    position: absolute;
+    z-index: 2;
+    left: 0.8rem;
+    top: 0.8rem;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.section-3__cards_card__head .discount{
+    background-color: #000929cc;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 0.5rem 0.625rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+    color: #fff;
+}
+.section-3__cards_card__head .popular{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAoCAYAAADJ/xXvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU9SURBVHgB7ZtBbBRVGMe/NzvL7rbQ0kQDF0kTjhrayEXZS1eTErzQ4EGjBm5tbKIxmnJR026UCwajmDRpj0QDHsD1IkKI9lL0YrJNIB4EbeQCRkOhW9vu7Ozj/d/0DbPT2e3SfYUOvF/SzszOzHtvvv/3fe97Oy2jELef6uuzmH2QMz5AnLrJsElgRUa8WHXcfNfc1GzNGbVze3vfditpjXJi75FhU8OIfVF1KhBzzjsmT0CWtH8m4r1kiAmsyJ1KDkJaOEQEGgHjBu+1kvYo9piIwm6WTPxFhljCuZuzrGRilAzxhSUGLM7JpNEYI4qag5b4bUSMN90WGWKPVhETz+0m65kdqz5Pvr6fWMdWMmwMWkVMfzpMma+O1nyWyPZQ28kRIWQ/GTYGLSIi+toLJ2QkJp7d7e2LLUgeyHrbV7K0UURF/5OEFhFZ50qq5Djwvsnjd0tyC2HlVojaTEqFIJ3/XPJ/Oq4VpFOEhcJx28mj8vy2376R12bEcfg6dU61tfWniZqsgHtwLmoMqZHD8niLmA5wbO/rqTtuPKfqJ3ydul/9YExRY10vNmnAvXKdFgY+kMYG2AcYpHogCI0HrVyeaarNyvSMfy2MAOPP731LOoeKfNa5jZzTP5J79U/Rzx6ys70i8idk/+7V635b1Ru3qHzmgt8WxF/4+1bTY2mG1OCr/r4tsk9U2xgDxpIQ48c4rF07fFu1ghYRFYvvHPejEl6cGjpUcx6GX548R+WJs/JhGgEjLH92Su5zcW1GzKvKCdIjR4SQO6n00pB0IAADQVyInT42XGOc6o2bfltl0X/HHwUZjTpFTGT3BJyun5Y+Hl91jXPmon9NRqztcB2yk8pa60VrYQNh+J2SSBdfC0MfjkyfqcFDNXNmM7BQ2oEAzvlpX8Bg/+VvL8ror5eqWEe73PI7C6QLFG9wKuf0BXJ+mJaO3Cj1AmvFNq0KCLRGIuB3YRzW8BqkwbUGDy+1hXHgCIhACAQvVuKEBVRUVz6HUVW0q2JL7ou2MMby5FnSReq1/XKL8aHtjKjSo1Jq+tjb0nnUM5UnzpEOtK8T4enze9+kpY/GI1MmBj7//BtrplPlCCoVlnKD8thzkvoVqYoA3He/qZViS2QJRMvCwPsN+/cLtSZBKpVznZiTIR763hK1pOLeOGAnZJLFiJS7HrRGItaJAPMR5j4MFJWYAp83Ow9hjlPzWBAIgTZQGMAhggUMhFUGDYrkXrlWt4Dwq2gRraotVVFX60R7EJVKAdbDQeBQweeFY+MYWUGl/LWdeW20iIjBYJEvH557BczSh+PSKBg0BqyMrwMUUO2Fz2U/zvnLfpr1CinmR20zVISjYZ5uO5WXjgcwn8O4ED8I5mKIpoCTqVRayg35DmHt2knt352oW6XiPpxPiQJt8d3j1CpaRGy0TsRSASIGI6ZVYGCkRBgbEalSF/pCVfgg3o17/j8y6n3b9Mlww3bQVxCIYR/YJ58tvKTxskV/ZDZB+47INGgP21adm809/TInTYTXiQDFCbxuUaSS8qSeiTwI5mA4ESJdzZfrRc2zOlLcw0SriDACDBquHPHVW2W62LKRDdFoFdHwaDDvEx8DjIjxp2hEjDnMiBh/qgk3b0SMMaIi/bLr5tSsETG+FMlxx7BjRIwhiEDuuDn1DzXaX0UZNoxZId734k1IoevfS1PBE/bv8//lGed1/5T/heWZxi8HDY8c68Wl4hhnLE+G2CLnRCNkvPELGyNkfKmpTo2Q8WTVEsMI+RjxS7p37NdUj3lNFXcgJBk2PfcADXp+lH6PeqIAAAAASUVORK5CYII=);
+    height: 2.5rem;
+    width:7.1rem;
+    background-size: cover;
+    position: absolute;
+    bottom: -1rem;
+
+}
+.section-3__cards_card__discript .count{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid #6c727f1f ;
+}
+.section-3__cards_card__discript .scoring{
+    display: flex;
+}
+.section-3__cards_card__discript .scoring h5{
+    font-size: 1rem;
+}
+.section-3__cards_card__discript .discipt{
+    padding: 1rem;
+}
+.section-3__cards_card__discript h3{
+    font-size: 1.5rem;  
+}
+.section-3__cards_card__discript h3 a{
+    color: #0b0a0f;
+}
+.discript__info{
+    display: flex;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    align-items: center;        
+}
+.discript__info  .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: baseline;
+}
+.discript__info__text h5{
+    color: #4d5461;
+    font-size: 1rem;
+}
+.discript__btn a{
+    text-align: center;
+    color: #000929;
+}
+.discript__btn a svg{
+    margin-right: 1rem;
+    vertical-align:   middle;
+    stroke: currentColor;
+}
+.discript__btn .btn{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discript__btn:hover .btn{
+    transition: 0.3s;
+    color: #fff;
+}
+.section-3__bottom{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+/* section 4 */
+.section__4{
+    padding: 6rem 0;
+    background-image: url(https://reservq.vercel.app/assets/Process-bg-88e10cae.png);
+}
+.section__4__img{
+    position: absolute;
+    left: -30%;
+    z-index: 1;
+}
+.section__4__img img{
+    width: 100%;
+}
+.po-r{
+    height: 800px;
+    position: relative;
+}
+.section__4__header h2{
+    color: #fff;
+    font-size:3rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+.section__4__proses{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.section__4__proses__item{
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: #0d1634;
+    height: 100%;
+    width: 33.75rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    color: #fff;
+}
+.section__4__proses__item__icon{
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff1a;
+    border-radius: 1rem;
+}
+.section__4__proses__item__img{
+    position: absolute;
+    right: 2rem;
+}
+.proses__hov::before{
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+    position: absolute; 
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(305deg, #f01543 -22.35%, #fe724c 134.49%);;
+}
+.section__4__proses__item__text h3{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+.section__4__proses__item__text p{
+    opacity: 0.5;
+    padding-top:0.5rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: #fff;
+}
+.proses__hov:hover:before{
+    top: 0;
+    height: 100%;
+}
+/* section 5 */
+.section__5{
+    padding: 5rem 0;
+}
+.section__5__header h2{
+    color: #000929;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+.section__5__populars{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.section__5__populars__item{
+    display: flex; 
+    gap: 2rem;
+    padding: 0 0.75rem;
+    margin-top: 1.9rem;
+}
+.section__5__populars__item__img {
+    position: relative;
+}
+.section__5__populars__item__img img{
+    width: 100%;
+    transition: 0.3s;
+    height: 100%;
+}
+.section__5__populars__item__img__icon{
+    position: absolute;
+    display: flex;
+    gap: 0.2rem;
+    top: 0.75rem;
+    left: 0.75rem;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 6px;
+    background: rgba(0, 9, 41, .8);
+    color: #fff;
+}
+.section__5__populars__item__discrip__header{
+    padding: 0 0 0.75rem;
+}
+.section__5__populars__item h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+.section__5 .discript__btn{
+    padding: 1.25rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section__5__populars__item:hover .pro_card::after{
+    transition: 1s;
+    left: 180%;
+}
+.section__5__populars__item:hover .btn-r::after{
+    transition:0.4s ;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    border-radius: 1rem; 
+}
+.discript__btn .btn{
+    color: #6c727f;
+}
+.section__5__populars__item:hover .btn-r{
+    color: #fff;
+}
+.section__5__populars__item:hover .btn-r::before{
+    height: 100%;
+    transition-delay:0.3s ;
+    bottom: 0;   
+}
+.section__5__populars__item__img{
+    border-radius: 0.75rem 0 0 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+.section__5__populars__item:hover .section__5__populars__item__img img{
+    transform: scale(1.1);
+}
+/* sections 6 */
+.section__6{
+    padding: 5rem 0;
+    background-color: #000929 ;
+}
+.section__6__costumers{
+    display: flex;
+    justify-content: space-between;
+}
+.section__6__header h2{
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center; 
+}
+.section__6__costumers__discription{
+    width: 100%;
+    position: relative;
+    padding: 66px 20px 20px;
+    border: 1.5px solid rgba(255, 255, 255, .08);
+    border-radius: 1.25rem;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    color: #e8e6f999;
+    transition: all linear 0.3s;
+}
+.section__6__costumers__discription:hover{
+    background-color: #ffffff1a;
+}
+.section__6__costumers__costumer{
+    padding-top: 2.5rem;
+}
+.section__6__costumers__discriptio__icon{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.section__6__costumers__costumer{
+    display: flex;
+    gap: 1.5rem;
+    color: #ffffff;
+}
+.section__6__costumers__costumer h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 4px 0 2px
+}
+.section__6__costumers__costumer h5{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 160%;
+}
+.section__6__costumers__costumer__text{
+    padding-top: 0.5rem;
+}
+/* section 7 */
+.section__7{
+    display: flex;
+    padding: 5rem 0;
+    background-image: url(https://reservq.vercel.app/assets/faq-bg-7118ca12.png);
+}
+.section__7 .container{
+    display: flex;
+}
+.Answered h2{
+    font-size:3rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+.section__7 .acordion{
+    margin-top: 3rem;
+}
+.section__7 .acordion__detalis{
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 40px #0000000a;
+    margin-bottom: 18px;
+    border-radius: 8px;
+}
+.section__7 .acordion__detalis p{
+    line-height: 145%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: #4d5461;  
+    padding: 1rem;
+}
+.section__7 .acordion__detalis[open] .acordin__summary{
+    border-bottom: 1px #f01543 solid;
+}
+.section__7 .acordin__summary{
+    font-size: 18px;
+    position: relative;
+    font-weight: 600;
+    line-height: 145%;
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 40px #0000000a;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+.s_icon{
+    position: absolute;
+    right: 1rem;
+}
+.on{
+    display: none !important;
+}
+.section__7 .acordion__detalis[open] .off{
+    display: none;
+}
+.section__7 .acordion__detalis[open] .on{
+    display: inline-block !important;
+}
+.section__7__faq{
+    height: 610px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section__7__faq .col-4,.col-8{
+    padding:0 0.75rem  ;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.section__7__faq  img{
+    height: 100%;
+}
+.faq_secound img{
+    position: absolute;
+    right: -4rem;
+}
+.faq__overlay{
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+}
+.red__overlay{  
+    border-radius: 0.7rem;
+    width: 147%;
+    background-color: #f01543d6;
+}
+.overlay-text{
+    color: #fff;
+    position: absolute;
+    left: 18%;
+    top:43%;
+}
+.overlay-text h2{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: -.32px;
+}
+.overlay-text h2 svg{
+    vertical-align: middle;
+}
+.overlay-text h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.blue__overlay{
+    width: 125%;
+    background-color: #000929d6;
+    border-radius: 0.7rem;
+}
+/* section__8 */
+.section__8{
+    padding: 6.5rem 0;
+    background-image: url(https://reservq.vercel.app/assets/rest-bg-542f355f.png);
+    background-size: cover;
+}
+.section__8__main{
+    display: flex;
+}
+.section__8__main__img{
+    position: relative;
+}
+.section__8__main__img img{
+    position: absolute;
+    bottom:-6.5rem;
+    right: -40%;
+}
+.section__8__main__text h2{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 140%;
+}
+.section__8__main__text p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 145%;
+    color: #e5e6eb;
+    padding-top: 24px;
+    padding-right: 106px;
+}
+.section__8__main__text__btn{
+    display: flex;
+    margin-top: 3rem;
+}
+.btn-gp{
+    width: 225px;
+    height: 68px;
+    padding: 0.8rem 2.4rem ;
+    background-color: #fff;
+    border-radius: 2.375rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #000929;;
+    border: 1px solid #e5e6eb;
+    font-weight: 700;
+}
+.btn-apl{
+    width: 225px;
+    height: 68px;
+    padding: 0.8rem 2.4rem ;
+    border-radius: 2.375rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 700;
+    background: #0b0a0f !important;
+    border: 1px solid #0b0a0f !important;
+    color: #fff !important;
+}
+/* footer */
+.footer__main{
+    padding:6.875rem 0;
+    background-image: url(https://reservq.vercel.app/assets/Footers-bg-7148736e.png) ;
+    background-size: cover;
+}
+.copyright{
+    background-color: #000929;
+    padding: 1rem 0;
+    color: #9ea3ae;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 145%;
+}
+.copyright span{
+    text-decoration: underline;
+}
+.footer__main__first{
+    padding:0 0.75rem ;
+}
+.footer__main__first__discription{
+    padding: 0.75rem 2.5rem 0 0;
+}
+.footer__main__first__discription h4{
+    font-size: 18px;
+    font-weight: 400 !important;
+    line-height: 148%;
+    color: #f4f4f6;
+}
+.footer__main__first__media{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.footer__main__first__media a{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #192140;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #747681;
+}
+.footer__main__first__media a:hover{
+    background-color: #f01543;
+    color: #FFF;
+}
+.footer__main__first__media a i{
+    font-size: 20px;
+}
+.Quick__Link {
+    padding:0 0.75rem ;
+}
+.Quick__Link h3{ 
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 1.25rem;
+}
+.Quick__Link ul li a{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: #fff;
+    transition: all linear 0.5s;
+}
+.subscribe h3{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 1.25rem;
+}
+.subscribe__form {
+    margin-bottom: 5rem;
+}
+.subscribe__form form{
+    display: flex;
+    position: relative;
+}
+.subscribe__form form div{
+    position: relative;
+}
+.subscribe__form form div input{
+    position: absolute;
+    padding: 0.5rem 1rem 0.5rem 4rem;
+    width: 261px;
+    height: 56px;
+    background: rgba(231, 229, 234, .2);
+    border-radius: 10px;
+    padding-left: 64px;
+    color: #fff;
+    border: 1px solid #f01543;
+}
+.subscribe__form form div input:focus{
+    border: 1px solid #f01543;
+    outline: 0;
+}
+.subscribe__form form div input::placeholder{
+    font-size: 18px;
+}
+.subscribe__form form div img{
+    position: absolute;
+    z-index: 5;
+    top: 15px;
+    left: 20px;
+}
+.subscribe__form form .btn {
+    right: 0;
+    position: absolute;
+    height: 56px;
+}
+.quick-line-btn{
+    display: flex;
+    gap: 1rem;
+}
+.Quick__Link ul li a:hover{
+    color: #f01543;
 }
