@@ -1,0 +1,97 @@
+.contactus{
+    padding: 5rem 0 6rem;
+}
+.contactus__text{
+    padding: 0 0.75rem;
+    margin-top: 2rem;
+}
+.contactus__text__head h2{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #000929;
+    padding-bottom: 2rem;
+}
+.contactus__text__itme{
+    padding: 1rem 3rem 1rem 2rem;
+    display: flex;
+    gap:2rem;
+    box-shadow: 0 10px 50px #0e173914;
+    border-radius: 1.25rem;
+    margin-top: 30px;
+}
+.contactus__text__itme__discrip h5{
+    color: #000929;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+}
+.contactus__text__itme__discrip p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 145%;
+    color: #747681;
+    padding-top: 6px;
+}
+.contactus__text__itme__discrip a{
+    color: #000929;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+}
+.contact__form{
+    background-image: url(https://reservq.vercel.app/assets/from-e1762aba.png);
+    border-radius: 10px;
+    background-color: #f9fafb;
+    padding: 3rem 2rem 4.5rem;
+}
+.dffdc{
+    display: flex;
+    flex-direction: column;
+}
+.dffdc label{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    margin-bottom: 3px;
+    color:#000929 ;
+}
+.dffdc input,textarea{
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #f4f4f4;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+}
+.dffdc textarea{
+    height: 10rem;
+}
+.form__btn{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 1.5rem !important;
+    width: 140px;
+    height: 60px;
+    border: 1px solid #f01543;
+    border-radius: 0.5rem;
+
+}
+.gform{
+    gap: 70px;
+    margin-bottom: 1rem;
+}
+.maps{
+    padding: 0 0 6rem;
+}
+.maps__iferm{
+    overflow: hidden;
+    border-radius: 1rem 1rem 0  0 ;
+}
+.maps__iferm iframe{
+    width: 100%;
+}

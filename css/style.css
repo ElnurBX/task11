@@ -566,7 +566,7 @@ nav >ul >li:hover ul{
 }
 .active{
     background-color:#f01543;
-    color: #fff;
+    color: #fff !important;
 }
 .section-3__cards{
     display: flex;
@@ -1218,4 +1218,36 @@ nav >ul >li:hover ul{
 }
 .Quick__Link ul li a:hover{
     color: #f01543;
+}
+
+
+
+
+/* menu page */
+.inner-banner{
+    background-image: url(../img/iner-baner.png) ;
+    padding: 7.5rem 0;
+    background-size: cover;
+}
+.inner-banner h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 140%;
+    color: #fff;
+    text-align: center;
+}
+.inner-banner__item{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    gap: 0.2rem;
+}
+.inner-banner__item a{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.inner-banner__item span{
+    font-size: 1.5rem;
 }
