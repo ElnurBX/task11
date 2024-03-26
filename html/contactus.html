@@ -20,11 +20,12 @@
 
 <body>
     <header>
-        <div class="container ">
+        <div class="desktop__header d-md-none">
+        <div class="container desktop__header">
             <div class="tophead">
-                <div class="col-2">
+                <div class="col-2 col-md-12 ">
                     <details class="header__detalis">
-                        <summary class="acordin__summary">
+                        <summary class="acordin__summary" >
                             <span>
                                 <svg class="as" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -55,11 +56,11 @@
                         </ul>
                     </details>
                 </div>
-                <div class="col-4 ">
+                <div class="col-4 col-md-12  ">
                     <p class="tophead__link">It's the last day to save. The skills for now — <span><a href="#">now on
                                 sale.</a></span></p>
                 </div>
-                <div class="tophead__contact col-4">
+                <div class="tophead__contact col-4 col-md-12 ">
                     <div class="tophead__contact">
                         <div class="tophead__contact__icon">
                             <span>
@@ -96,7 +97,7 @@
         <div class="container-fluid navbar">
             <div class="container d-flex">
                 <nav class="navbar__menu ">
-                    <div class="col-12 navbar">
+                    <div class="col-12  col-md-12  navbar">
                         <div class="navbar__menu__main">
                             <div class="navbar__menu__main__logo">
                                 <img src="https://reservq.vercel.app/assets/footer-logo-364dc9a3.svg" alt="">
@@ -105,18 +106,18 @@
                                 <ul>
                                     <li><a href="/">Home<span><i class="fa-solid fa-angle-down"></i></span></a>
                                         <ul>
-                                            <li><a href="#">Home-01</a></li>
+                                            <li><a href="/html/index.html">Home-01</a></li>
                                             <li><a href="#">Home-02</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="./menu.html">Menu</a></li>
                                     <li><a href="/">Pages<span><i class="fa-solid fa-angle-down"></i></span></a>
                                         <ul>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="/html/about.html">About Us</a></li>
+                                            <li><a href="/html/contactus.html">Contact Us</a></li>
                                             <li><a href="#">Blog</a></li>
                                             <li><a href="#">Blog Details</a></li>
-                                            <li><a href="#">Food Details</a></li>
+                                            <li><a href="/html/fooddetalis.html">Food Details</a></li>
                                             <li><a href="#">Shopping Cart</a></li>
                                             <li><a href="#">Shopping Cart Two</a></li>
                                             <li><a href="#">Cart Address</a></li>
@@ -133,7 +134,7 @@
                     </div>
                 </nav>
                 <div class="navbar__menu__mbt ">
-                    <div class="navbar__menu__mbt__search ">
+                    <div class="navbar__menu__mbt__search d-xl-none">
                         <input placeholder="Search food" type="text" name="" id="">
                         <div class="nav-search">
                             <button type="submit"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -186,7 +187,43 @@
 
             </div>
         </div>
+    </div>
+    <div  class="mobile__header d-none d-md-block ">
+        <img src="https://reservq.vercel.app/assets/logo-header-a680f330.svg" alt="">
+        <details class="mobile__header__details">
+            <summary class="">
+                <div class="mobile__header__details__summary open">
+                <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="summary__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </summary>
+            <div class="details__navbar">
+                <img src="https://reservq.vercel.app/assets/logo-header-a680f330.svg" alt="">
+                <ul>
+                    <li><a href="/html/index.html">Home</a>
+                        <ul>
+                            <li><a href="/html/index.html">Home-01</a></li>
+                            <li><a href="#">Home-02</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/about.html">About us</a></li>
+                    <li><a href="/html/contactus.html">Contact</a></li>
+                    <li><a href="#">Blog</a>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Blog-Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <div class="overlaydetails"></div>
+    </div>
     </header>
+    
     <main>
         <section class="inner-banner">
             <div class="container">
@@ -204,12 +241,12 @@
         </section>
 
         <section class="contactus">
-            <div class="container d-flex">
-                <div class="col-5 contactus__text">
+            <div class="container d-flex d-md-block ">
+                <div class="col-5 col-md-12  contactus__text">
                     <div class="contactus__text__head">
                         <h2>Get in Touch with Us with Any Questions</h2>
                     </div>
-                    <div class="contactus__text__itme col-10">
+                    <div class="contactus__text__itme col-10 d-xs-block">
                         <div class="contactus__text__itme__icon">
                             <span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M63.4375 4.84375H44.6875C35.642 4.84375 28.2812 12.2045 28.2812 21.25C28.2812 29.5012 34.4039 36.3494 42.3438 37.4892V44.6875C42.3438 45.635 42.9136 46.4911 43.7903 46.8527C44.6548 47.2134 45.6689 47.02 46.3447 46.3445L55.033 37.6562H63.4375C72.483 37.6562 80 30.2955 80 21.25C80 12.2045 72.483 4.84375 63.4375 4.84375ZM44.6875 23.5934C43.3928 23.5934 42.3438 22.5441 42.3438 21.2497C42.3438 19.9553 43.3928 18.9059 44.6875 18.9059C45.9819 18.9059 47.0312 19.9553 47.0312 21.2497C47.0312 22.5441 45.9819 23.5934 44.6875 23.5934ZM54.0625 23.5934C52.7678 23.5934 51.7188 22.5441 51.7188 21.2497C51.7188 19.9553 52.7678 18.9059 54.0625 18.9059C55.3569 18.9059 56.4062 19.9553 56.4062 21.2497C56.4062 22.5441 55.3569 23.5934 54.0625 23.5934ZM63.4375 23.5934C62.1428 23.5934 61.0938 22.5441 61.0938 21.2497C61.0938 19.9553 62.1428 18.9059 63.4375 18.9059C64.7319 18.9059 65.7812 19.9553 65.7812 21.2497C65.7812 22.5441 64.7319 23.5934 63.4375 23.5934Z" fill="#FE724C"></path><path d="M52.6562 75.1562C56.5334 75.1562 59.6875 72.0022 59.6875 68.125V58.75C59.6875 57.7406 59.042 56.8456 58.0853 56.5275L44.0558 51.84C43.3691 51.6089 42.6184 51.7141 42.0142 52.1123L36.0495 56.088C29.7323 53.0759 22.2366 45.58 19.2244 39.2628L23.2 33.2981C23.6005 32.6961 23.7013 31.9431 23.4723 31.2566L18.7848 17.227C18.4669 16.2705 17.5719 15.625 16.5625 15.625H7.03125C3.15406 15.625 0 18.7461 0 22.6233C0 49.6267 25.6528 75.1562 52.6562 75.1562Z" fill="#F01543"></path></svg></span>
                         </div>
@@ -219,7 +256,7 @@
                             <a href="tel:+994 556810051">+1 707 797 0462</a>
                         </div>
                         </div>
-                        <div class="contactus__text__itme col-10">
+                        <div class="contactus__text__itme col-10 d-md-block">
                             <div class="contactus__text__itme__icon">
                                 <span><svg width="82" height="66" viewBox="0 0 82 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59.6871 14.9219H5C2.23858 14.9219 0 17.1605 0 19.9219V66.0003L14.9218 58.5394H59.6871V14.9219Z" fill="#FE724C"></path><path d="M25.6562 0H81.4912V53.3741L64.8477 43.9224H20.6562V5C20.6562 2.23858 22.8948 0 25.6562 0Z" fill="#F01543"></path><rect opacity="0.7" x="5.73438" y="0.574219" width="8.50744" height="8.03481" fill="#FF7236"></rect></svg></span>
                             </div>
@@ -232,25 +269,25 @@
                         </div>
                 
                 </div>
-                <div class="col-7 contact__form">
+                <div class="col-7 col-md-12  col-xs-12 contact__form">
                     <form action="">
                         <div class="col12 contact__form__main">
-                            <div class="col-12 d-flex gform">
+                            <div class="col-12 d-flex  d-xs-block gform">
                                 <div class="col-6 dffdc">
                                     <label >First Name</label>
                                     <input placeholder="Max" type="text">
                                 </div>
-                                <div class="col-6 dffdc">
+                                <div class="col-6 d-xs-block dffdc">
                                     <label >Last Name*</label>
                                     <input placeholder="Mustermann" type="text">
                                 </div>
                             </div>
-                            <div class="col-12 d-flex gform">
+                            <div class="col-12 d-xs-block d-flex gform">
                                 <div class="col-6 dffdc">
                                     <label >E-mail*</label>
                                     <input  placeholder="Max" type="text">
                                 </div>
-                                <div class="col-6 dffdc">
+                                <div class="col-6  dffdc">
                                     <label >Telephone*</label>
                                     <input placeholder="+49 123456789" type="text">
                                 </div>
@@ -272,9 +309,9 @@
                 </div>
             </div>
         </div>
-        <section class="section__7">
-            <div class="container">
-                <div class="col-6">
+        <section class="section__7 d-md-block">
+            <div class="container d-md-block d-flex">
+                <div class="col-6 col-lg-12">
                     <div class="Answered">
                         <h2>Foodie FAQ: Your Culinary Queries Answered </h2>
                     </div>
@@ -297,7 +334,7 @@
                         </details>
                     </div>
                 </div>
-                <div class="col-6 section__7__faq">
+                <div class="col-6 col-lg-12 section__7__faq  d-md-none">
                     <div class="col-8">
                         <img src="https://reservq.vercel.app/assets/faq-1-41834309.png" alt="">
                     </div>
@@ -324,11 +361,11 @@
             </div>
         </section>
         <section class="section__8">
-            <div class="container section__8__main "> 
-                <div class="col-6 section__8__main__text">
+            <div class="container section__8__main d-md-bloc "> 
+                <div class="col-6 section__8__main__text col-md-12">
                     <h2>Find out Better Restaurant Food Experience</h2>
                     <p>We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.</p>
-                    <div class="section__8__main__text__btn">
+                    <div class="section__8__main__text__btn f-xs-w ">
                         <a class="btn btn-gp" href="">
                             <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVaSURBVHgB7Zh7bBRFHMe/ey965WGh1YgSOR4VEhARFaH4oDGRhASQIPERDCD4iJgY/1BUgoCQBlOlASsQrFpbDMRUHlKxKAEU0QKW0vb6onBXikDf92h7d3u7Oz/nrtfaXvfuWvqKCd9kbndmdmY/+5vvzM4ecFu9k6BW+GDFtilunWvBMNJZLox//3sMoroATqumoeWNfxYP0R4cSxoBsYZh+UTSkqumLVYMgroA6srpaVnEcb3uDPRRRwGtBINWhxF6Y/o9bPim3NHvVGIA1XWIzbQQhMNggEZTAX1MOohDkgYwaLTSUE3UNpMhLvnciLcaMADShKtkcjy8jhVggp4nwCMo+nq41hbK1/++07551VzaqMOgAAr/JRLjoTjn8ygKYBpf8oOa6tCUlu+kM6Ma1k/BgAMGQzrngNW+AOKR9LcIGMNB7pktWtkc69z4zXRbigkDBiiogDY9BFxbyWn1nS4VoaCBuVaUaeqsdzk2p8517RiDfgfsCNfx3DUBqFqmeqmHZNRS05rTnhu5k+3Jr6NfAduipnbePBm4sQihpGjYvWWo2z3SsbHsvsYtj6NfAINBg1N9AmB5hU9zfcimNnJNuqlpPs1BM6bZk8ehTwE7Ri1U3jkJuLIyLKTEF1MO+vIl2Cxxzk1pCe60segTwEigbamZe9LyIiLJAxn1rGVVXOPxPCqZsgY9UFdAXTfAOtbb+TJY+SwiKbGlCvv+yYpFU3Eqy4+5RCUTIjdCTz0YCrZmNlD8WsjhXuy8hOyqLEQzubULxR4P0XqQFQ4/RKUmE3oMGBxBqEAGwzr4cJt9E8fQqdmb9fk4YD2EaEXu3B8xCNS0CKzaSuWj0sk6y4RuA0IFAAgP6evJMR64vKC9eWJTFb649ivCijx8bWpcDrngPFXEzQiu1oUFoxCwocB9kDdn8htqkTh6O7ItWSG2xCpi7jho2QF+ZupY3DceDKpbfawG2RssiBYJPRExrxRc1hVQC3UPAuFndmATsbzoGPb8koLoCiOQOZ0vhlp0R4yhWvbSc5EBEQYiOGLonJ97tQCf56TySAggX/AqRwI/xyMCmOzxYv/1BjxsmIqC4PreedD3eCwAV1mAw3s/glHy8m2Zr63gby7kjoHg4bdZWgoYlfbufHUi/7RwMbwdOwslCKHwO2JBBVbFd2/kHkFSdhqiJDFwWQAu8IuLd/Pt2hAIr14ERSmQZOGcW6QPYp7CCURQ9z0YYmifv3ASKT/shFH0+oeVeCELRI8CR3/+8ihI3061O13apUNm0WPdgVMHVIMK4bknKwqRun8HB0A7kP+cAnCBJDOQQ6bd1oKR8TGJShZ6oFv24DzzeWTu2Qqj18vzQiB6vvi1PQ3xvTahWZaPVEvsvWlFp8pwC+q5B7lWn/gJn+3d1YohoB1LEALR4zPHzdhZG8lr4/NP/oZeSBcWTiWCicX5SM7c3QolkN9frTFrnRAiKbYbkvjuVPOpr+M699CHgGqzlufnlBQhMyXJ7yv+pvcf2+BkkORWaLuFWpKeMP9hQx8pfAQ7gM4/fxa7dmxDFPcctV8ADsbgYcp3drd3wwOXT1xBH6tbHlyZcxRbv9zjL/L9wyAEyN2k/F4juT98tPzkGfSTInowociM9ekZ/teXz3M+73mYXN8iSJ9U2Bp2LryZ50I/KqwHEwrNyPg4CUZP6+tLZuRqFsSUUrf46eLKU3YMgLoA6gTZKfPi5T/mYN1XGYgSPfzrjMijyPsatPK62aXHKjGoqqPhy1Jz6q7ev4Su8VQycYH5r4nzZmCQpLbrw9lJz4wzyPqXRIGV6+6oPfxIXp6E2/qf6l/SQV74JwNIngAAAABJRU5ErkJggg==" alt="icon"></span>Google Play
                         </a>
@@ -337,7 +374,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 section__8__main__img">
+                <div class="col-6 section__8__main__img d-md-none">
                     <img src="https://reservq.vercel.app/assets/restaurant-acff2947.png" alt="">
                 </div>
             </div>
@@ -345,8 +382,8 @@
     </main>
     <footer>
         <div class="footer__main">
-            <div class="container d-flex">
-                <div class="footer__main__first col-4">
+            <div class="container d-flex f-lg-w d-md-block ">
+                <div class="footer__main__first col-4 col-lg-12 .col-md-12 col-sm-12">
                     <div class="footer__main__first__logo">
                         <img src="https://reservq.vercel.app/assets/footer-logo-364dc9a3.svg" alt="">
                     </div>
@@ -360,7 +397,7 @@
                         <a href=""><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="Quick__Link col-2">
+                <div class="Quick__Link col-2  col-lg-6 .col-md-12 col-sm-12">
                     <h3>Quick Link</h3>
 
                     <ul>
@@ -371,14 +408,14 @@
                         <li><a href="/contact">Pickup</a></li>
                     </ul>
                 </div>
-                <div class="Quick__Link col-2 ">
+                <div class="Quick__Link col-2 col-lg-4 .col-md-12 col-sm-12">
                     <h3>Terms &amp; Privacy</h3>
                     <ul>
                         <li><a href="/trust-safety">Trust &amp; Safety</a></li>
                         <li><a href="/terms-service">Terms of Service</a></li>
                         <li><a href="/privacy-policy">Privacy Policy</a></li></ul>
                 </div>
-                <div class="col-4 subscribe">
+                <div class="col-4 subscribe col-lg-6 .col-md-12 col-sm-12">
                     <h3>Subscribe our Newsletter</h3>
                     <div class="subscribe__form">
                         <form action="">

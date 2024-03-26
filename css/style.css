@@ -8,6 +8,109 @@ header{
     position: sticky;
     background: linear-gradient(90deg, #f01543 -1.58%, #fe724c 100%);   
 }
+/* mobile */
+.mobile__header{
+    width: 100%;
+    background: #fff ;
+    top:0;
+    position: sticky;
+    position: relative;
+    z-index: 20;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: start;
+}
+
+.mobile__header__details{
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    padding:0 1rem ;
+    height: 4rem;
+    width:250px;
+    height: 100vh;
+    left: -250px;
+    transition: 0.5s ease;  
+    background:#fff;
+    overflow-y: scroll;
+
+}
+
+
+.mobile__header__details  + .overlaydetails{
+    left: -120%;
+    height: 100vh;
+    top: 0;
+    width: 120%;
+    transition: 0.5s;
+    transition-delay:0.5s ;
+    position: absolute;
+    opacity: 0;
+}
+.mobile__header__details[open]  + .overlaydetails{
+    content: "";
+    z-index: 19;
+
+    display: block;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    opacity: 1;
+
+}
+.mobile__header__details[open]{
+    left: 0;
+}
+.mobile__header__details__summary{
+    
+    right:5%;
+    top: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.mobile__header__details__summary.open{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f01543;
+    color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    z-index: 21;
+}
+.summary__close{
+    font-weight: 900;
+    font-size: 22px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: end;
+}
+
+.details__navbar img{
+    margin-bottom:2rem;
+}
+.details__navbar > ul{
+    display: flex;
+    flex-direction: column;
+
+}
+.details__navbar > ul > li ul{
+    display: none;
+    padding-left: 1rem;
+    padding-top:1rem ;
+}
+.details__navbar > ul > li:hover ul{
+    display: block;
+}
+.details__navbar li{
+    border-bottom: 1px solid #d3d3d3;
+    padding: 0.2rem 0;
+    margin-bottom:20px ;
+}
+.details__navbar li a{
+    color: #000;
+}
 /* header */
 .tophead{
     color: #ffffff;
@@ -359,10 +462,8 @@ nav >ul >li:hover ul{
 }
 .section-1__main__btn{
     font-weight: 600;
-    height:92px;
     margin-top:4.5rem ;
     padding: 0.75rem;
-    width: 612px;
     justify-content: space-between;
     display: flex; 
     background-color: #fff; 
@@ -378,6 +479,7 @@ nav >ul >li:hover ul{
     align-items: center;
     line-height: 68px;
     text-align: center;
+    height: 90px;
 }
 .section-1__main__btn .btn-r:hover{
     color: #fff;
@@ -422,7 +524,6 @@ nav >ul >li:hover ul{
     color: #fff;
 }
 .section-2__cards{
-    height: 142px;
     margin-top: 2.6rem ;
     margin-left: -12px;
     display: flex;  
@@ -639,6 +740,7 @@ nav >ul >li:hover ul{
     align-items: center;
     justify-content: space-between;
     border-bottom:1px solid #6c727f1f ;
+    color: #000;
 }
 .section-3__cards_card__discript .scoring{
     display: flex;
@@ -652,7 +754,7 @@ nav >ul >li:hover ul{
 .section-3__cards_card__discript h3{
     font-size: 1.5rem;  
 }
-.section-3__cards_card__discript h3 a{
+.section-3__cards_card__discript h3 {
     color: #0b0a0f;
 }
 .discript__info{
@@ -672,8 +774,11 @@ nav >ul >li:hover ul{
     font-size: 1rem;
 }
 .discript__btn a{
-    text-align: center;
+    display: block;
     color: #000929;
+}
+.section__4__img {
+    position: unset;
 }
 .discript__btn a svg{
     margin-right: 1rem;
@@ -709,6 +814,9 @@ nav >ul >li:hover ul{
     width: 100%;
 }
 .po-r{
+    width: 80%;
+}
+.po-r{
     height: 800px;
     position: relative;
 }
@@ -729,7 +837,6 @@ nav >ul >li:hover ul{
     border-radius: 1.25rem;
     background: #0d1634;
     height: 100%;
-    width: 33.75rem;
     padding: 1.25rem;
     display: flex;
     align-items: center;
@@ -799,6 +906,9 @@ nav >ul >li:hover ul{
     gap: 2rem;
     padding: 0 0.75rem;
     margin-top: 1.9rem;
+}
+.section__5__populars__item h3{
+    color: #000;
 }
 .section__5__populars__item__img {
     position: relative;
@@ -930,9 +1040,7 @@ nav >ul >li:hover ul{
     padding: 5rem 0;
     background-image: url(https://reservq.vercel.app/assets/faq-bg-7118ca12.png);
 }
-.section__7 .container{
-    display: flex;
-}
+
 .Answered h2{
     font-size:3rem;
     font-weight: 700;
@@ -1051,7 +1159,8 @@ nav >ul >li:hover ul{
 .section__8__main__img img{
     position: absolute;
     bottom:-6.5rem;
-    right: -40%;
+
+    width: 100%;
 }
 .section__8__main__text h2{
     color: #fff;
@@ -1221,7 +1330,9 @@ nav >ul >li:hover ul{
 }
 
 
-
+.subscribe img{
+    width: 100%;
+}
 
 /* menu page */
 .inner-banner{

@@ -1,7 +1,9 @@
 .section__about{
     padding: 10rem 0;
 }
-
+.section__about__left img{
+    width: 100%;
+}
 .section__about__left{
     position: relative;
 }

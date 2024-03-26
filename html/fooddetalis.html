@@ -20,11 +20,12 @@
 
 <body>
     <header>
-        <div class="container ">
+        <div class="desktop__header d-md-none">
+        <div class="container desktop__header">
             <div class="tophead">
                 <div class="col-2">
                     <details class="header__detalis">
-                        <summary class="acordin__summary">
+                        <summary class="acordin__summary" >
                             <span>
                                 <svg class="as" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -105,18 +106,18 @@
                                 <ul>
                                     <li><a href="/">Home<span><i class="fa-solid fa-angle-down"></i></span></a>
                                         <ul>
-                                            <li><a href="#">Home-01</a></li>
+                                            <li><a href="/html/index.html">Home-01</a></li>
                                             <li><a href="#">Home-02</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="./menu.html">Menu</a></li>
                                     <li><a href="/">Pages<span><i class="fa-solid fa-angle-down"></i></span></a>
                                         <ul>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="/html/about.html">About Us</a></li>
+                                            <li><a href="/html/contactus.html">Contact Us</a></li>
                                             <li><a href="#">Blog</a></li>
                                             <li><a href="#">Blog Details</a></li>
-                                            <li><a href="#">Food Details</a></li>
+                                            <li><a href="/html/fooddetalis.html">Food Details</a></li>
                                             <li><a href="#">Shopping Cart</a></li>
                                             <li><a href="#">Shopping Cart Two</a></li>
                                             <li><a href="#">Cart Address</a></li>
@@ -133,7 +134,7 @@
                     </div>
                 </nav>
                 <div class="navbar__menu__mbt ">
-                    <div class="navbar__menu__mbt__search ">
+                    <div class="navbar__menu__mbt__search d-xl-none">
                         <input placeholder="Search food" type="text" name="" id="">
                         <div class="nav-search">
                             <button type="submit"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -186,7 +187,43 @@
 
             </div>
         </div>
+    </div>
+    <div  class="mobile__header d-none d-md-block ">
+        <img src="https://reservq.vercel.app/assets/logo-header-a680f330.svg" alt="">
+        <details class="mobile__header__details">
+            <summary class="">
+                <div class="mobile__header__details__summary open">
+                <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="summary__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </summary>
+            <div class="details__navbar">
+                <img src="https://reservq.vercel.app/assets/logo-header-a680f330.svg" alt="">
+                <ul>
+                    <li><a href="/html/index.html">Home</a>
+                        <ul>
+                            <li><a href="/html/index.html">Home-01</a></li>
+                            <li><a href="#">Home-02</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/about.html">About us</a></li>
+                    <li><a href="/html/contactus.html">Contact</a></li>
+                    <li><a href="#">Blog</a>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Blog-Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <div class="overlaydetails"></div>
+    </div>
     </header>
+    
     <main>
         <section class="inner-banner">
             <div class="container">
@@ -205,8 +242,8 @@
 
         <section class="section__fooddetails">
             <div class="container">
-                <div class="col-12 d-flex">
-                    <div class="col-8 section__fooddetails__main">
+                <div class="col-12 d-xl-block d-sm-block d-flex">
+                    <div class="col-8  col-lg-12 section__fooddetails__main">
                         <h2>Chicken skewers with Slices of Sweet</h2>
                         <div class="col-12 section__fooddetails__main__slider">
                             <div class="main__slider">
@@ -267,7 +304,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 section__fooddetails__left">
+                    <div class="col-4 col-lg-12 section__fooddetails__left">
                         <div class="section__fooddetails__left__menu">
                             <h5>Frequently Bought together</h5>
                                 <div class="section__fooddetails__left__menu__add">
@@ -306,7 +343,7 @@
                                             <a class="add__count__btn positive" href=""><i class="fa-solid fa-plus"></i></a>
                                     </div>
                                 </div>
-                                <div class="section__fooddetails__left__menu__addfin">
+                                <div class="section__fooddetails__left__menu__addfin d-sm-block">
                                     <div class="add__count count__alone">
                                             <a class="add__count__btn negatif" href=""><i class="fa-solid fa-minus"></i></a>
                                             <span>2</span>
@@ -336,8 +373,8 @@
             <div class="container">
                     <h2 class="section__3__h2">Recent Order</h2> 
 
-                <div class="section-3__cards col-12">
-                    <div class="section-3__cards__card col-4 ">
+                <div class="section-3__cards col-12 d-md-block">
+                    <div class="section-3__cards__card col-4 col-md-12 ">
                         <div class="section-3__cards__card__item">
                         <div class="section-3__cards_card__head">
                             <div class="icon"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -382,7 +419,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="section-3__cards__card col-4 ">
+                    <div class="section-3__cards__card col-4 col-md-12">
                         <div class="section-3__cards__card__item">
                         <div class="section-3__cards_card__head">
                             <div class="icon"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -427,7 +464,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="section-3__cards__card col-4 ">
+                    <div class="section-3__cards__card col-4 col-md-12 ">
                         <div class="section-3__cards__card__item">
                         <div class="section-3__cards_card__head">
                             <div class="icon"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -477,11 +514,11 @@
             </div>
         </section>
         <section class="section__8">
-            <div class="container section__8__main "> 
-                <div class="col-6 section__8__main__text">
+            <div class="container section__8__main d-md-bloc "> 
+                <div class="col-6 section__8__main__text col-md-12">
                     <h2>Find out Better Restaurant Food Experience</h2>
                     <p>We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.</p>
-                    <div class="section__8__main__text__btn">
+                    <div class="section__8__main__text__btn f-xs-w ">
                         <a class="btn btn-gp" href="">
                             <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVaSURBVHgB7Zh7bBRFHMe/ey965WGh1YgSOR4VEhARFaH4oDGRhASQIPERDCD4iJgY/1BUgoCQBlOlASsQrFpbDMRUHlKxKAEU0QKW0vb6onBXikDf92h7d3u7Oz/nrtfaXvfuWvqKCd9kbndmdmY/+5vvzM4ecFu9k6BW+GDFtilunWvBMNJZLox//3sMoroATqumoeWNfxYP0R4cSxoBsYZh+UTSkqumLVYMgroA6srpaVnEcb3uDPRRRwGtBINWhxF6Y/o9bPim3NHvVGIA1XWIzbQQhMNggEZTAX1MOohDkgYwaLTSUE3UNpMhLvnciLcaMADShKtkcjy8jhVggp4nwCMo+nq41hbK1/++07551VzaqMOgAAr/JRLjoTjn8ygKYBpf8oOa6tCUlu+kM6Ma1k/BgAMGQzrngNW+AOKR9LcIGMNB7pktWtkc69z4zXRbigkDBiiogDY9BFxbyWn1nS4VoaCBuVaUaeqsdzk2p8517RiDfgfsCNfx3DUBqFqmeqmHZNRS05rTnhu5k+3Jr6NfAduipnbePBm4sQihpGjYvWWo2z3SsbHsvsYtj6NfAINBg1N9AmB5hU9zfcimNnJNuqlpPs1BM6bZk8ehTwE7Ri1U3jkJuLIyLKTEF1MO+vIl2Cxxzk1pCe60segTwEigbamZe9LyIiLJAxn1rGVVXOPxPCqZsgY9UFdAXTfAOtbb+TJY+SwiKbGlCvv+yYpFU3Eqy4+5RCUTIjdCTz0YCrZmNlD8WsjhXuy8hOyqLEQzubULxR4P0XqQFQ4/RKUmE3oMGBxBqEAGwzr4cJt9E8fQqdmb9fk4YD2EaEXu3B8xCNS0CKzaSuWj0sk6y4RuA0IFAAgP6evJMR64vKC9eWJTFb649ivCijx8bWpcDrngPFXEzQiu1oUFoxCwocB9kDdn8htqkTh6O7ItWSG2xCpi7jho2QF+ZupY3DceDKpbfawG2RssiBYJPRExrxRc1hVQC3UPAuFndmATsbzoGPb8koLoCiOQOZ0vhlp0R4yhWvbSc5EBEQYiOGLonJ97tQCf56TySAggX/AqRwI/xyMCmOzxYv/1BjxsmIqC4PreedD3eCwAV1mAw3s/glHy8m2Zr63gby7kjoHg4bdZWgoYlfbufHUi/7RwMbwdOwslCKHwO2JBBVbFd2/kHkFSdhqiJDFwWQAu8IuLd/Pt2hAIr14ERSmQZOGcW6QPYp7CCURQ9z0YYmifv3ASKT/shFH0+oeVeCELRI8CR3/+8ihI3061O13apUNm0WPdgVMHVIMK4bknKwqRun8HB0A7kP+cAnCBJDOQQ6bd1oKR8TGJShZ6oFv24DzzeWTu2Qqj18vzQiB6vvi1PQ3xvTahWZaPVEvsvWlFp8pwC+q5B7lWn/gJn+3d1YohoB1LEALR4zPHzdhZG8lr4/NP/oZeSBcWTiWCicX5SM7c3QolkN9frTFrnRAiKbYbkvjuVPOpr+M699CHgGqzlufnlBQhMyXJ7yv+pvcf2+BkkORWaLuFWpKeMP9hQx8pfAQ7gM4/fxa7dmxDFPcctV8ADsbgYcp3drd3wwOXT1xBH6tbHlyZcxRbv9zjL/L9wyAEyN2k/F4juT98tPzkGfSTInowociM9ekZ/teXz3M+73mYXN8iSJ9U2Bp2LryZ50I/KqwHEwrNyPg4CUZP6+tLZuRqFsSUUrf46eLKU3YMgLoA6gTZKfPi5T/mYN1XGYgSPfzrjMijyPsatPK62aXHKjGoqqPhy1Jz6q7ev4Su8VQycYH5r4nzZmCQpLbrw9lJz4wzyPqXRIGV6+6oPfxIXp6E2/qf6l/SQV74JwNIngAAAABJRU5ErkJggg==" alt="icon"></span>Google Play
                         </a>
@@ -490,7 +527,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 section__8__main__img">
+                <div class="col-6 section__8__main__img d-md-none">
                     <img src="https://reservq.vercel.app/assets/restaurant-acff2947.png" alt="">
                 </div>
             </div>
@@ -498,8 +535,8 @@
     </main>
     <footer>
         <div class="footer__main">
-            <div class="container d-flex">
-                <div class="footer__main__first col-4">
+            <div class="container d-flex f-lg-w d-md-block ">
+                <div class="footer__main__first col-4 col-lg-12 .col-md-12 col-sm-12">
                     <div class="footer__main__first__logo">
                         <img src="https://reservq.vercel.app/assets/footer-logo-364dc9a3.svg" alt="">
                     </div>
@@ -513,7 +550,7 @@
                         <a href=""><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="Quick__Link col-2">
+                <div class="Quick__Link col-2  col-lg-6 .col-md-12 col-sm-12">
                     <h3>Quick Link</h3>
 
                     <ul>
@@ -524,14 +561,14 @@
                         <li><a href="/contact">Pickup</a></li>
                     </ul>
                 </div>
-                <div class="Quick__Link col-2 ">
+                <div class="Quick__Link col-2 col-lg-4 .col-md-12 col-sm-12">
                     <h3>Terms &amp; Privacy</h3>
                     <ul>
                         <li><a href="/trust-safety">Trust &amp; Safety</a></li>
                         <li><a href="/terms-service">Terms of Service</a></li>
                         <li><a href="/privacy-policy">Privacy Policy</a></li></ul>
                 </div>
-                <div class="col-4 subscribe">
+                <div class="col-4 subscribe col-lg-6 .col-md-12 col-sm-12">
                     <h3>Subscribe our Newsletter</h3>
                     <div class="subscribe__form">
                         <form action="">

@@ -1,0 +1,49 @@
+@media only screen and (max-width:992px){
+    .desktop__header{
+        display: none;
+        top: 1px !important;
+        position: sta;
+    }
+    header{
+        z-index: 19;
+        top: 0;
+        position: sticky;
+        background: linear-gradient(90deg, #f01543 -1.58%, #fe724c 100%);   
+    }
+    .section-1__main h1{
+        font-size: 40px;
+    }
+    .section-3__header h2{
+        font-size: 40px;
+    } 
+    .section-1__main__btn{
+        margin: 2rem auto;
+    }
+    .section__5__populars__item{
+        gap:0;
+    }
+    .section__6__costumers__item{
+        margin: auto;
+    }
+    .section-3__cards{
+        margin: auto;
+    }
+    .section__4__img img{
+        width: 100%;
+    }
+    .section__4__img {
+        position: unset;
+    }
+    .po-r{
+        height: auto;
+    }
+    .section__fooddetails__header ul{
+        gap: 0;
+    }
+}
+@media only screen and (max-width:502px){
+    .section-1__main__btn a{
+        margin: auto;
+    }
+
+}
